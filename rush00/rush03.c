@@ -3,33 +3,33 @@ void	ft_putchar(char c);
 
 void    print_row(int axis_x, char first, char mid, char end)
 {
-    int cnt;
+    int cntx;
 
-    cnt = 1;
-    while(cnt <= axis_x)
+    cntx = 1;
+    while(cntx <= axis_x)
     {
-        if(cnt == 1)
+        if(cntx == 1)
             ft_putchar(first);
-        else if(cnt == axis_x)
+        else if(cntx == axis_x)
             ft_putchar(end);
         else
             ft_putchar(mid);
-        cnt++;
+        cntx++;
     }
     ft_putchar('\n');
 }
 
 void	rush(int axis_x,int axis_y)
 {
-    int cnt;
+    int cnty;
 
-    cnt = 1;
-    while(cnt <= axis_y)
+    cnty = 1;
+    while(cnty <= axis_y)
     {
-        if(cnt == 1 || cnt == axis_y)
+        if(cnty == 1 || cnty == axis_y)
             print_row(axis_x,'A','B','C');
         else
             print_row(axis_x,'B',' ','B');
-        cnt++;
+        cnty++;
     }
 }
