@@ -27,9 +27,9 @@ void	rush(int axis_x,int axis_y)
     while(cnty <= axis_y)
     {
         if(cnty == 1 || cnty == axis_y)
-            ft_print_row(axis_x,'A','B','C');
+            ft_print_row(axis_x,'o','-','o');
         else
-            ft_print_row(axis_x,'B',' ','B');
+            ft_print_row(axis_x,'|',' ','|');
         cnty++;
     }
 }

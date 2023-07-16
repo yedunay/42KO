@@ -26,8 +26,10 @@ void	rush(int axis_x,int axis_y)
     cnty = 1;
     while(cnty <= axis_y)
     {
-        if(cnty == 1 || cnty == axis_y)
+        if(cnty == 1)
             ft_print_row(axis_x,'A','B','C');
+		else if(cnty == axis_y)
+			ft_print_row(axis_x,'C','B','A');
         else
             ft_print_row(axis_x,'B',' ','B');
         cnty++;
