@@ -1,0 +1,56 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red251\green2\blue7;\red0\green0\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c1680\c19835\c100000;
+}
+\margl1440\margr1440\vieww12920\viewh10760\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 Ex01 :\
+id -Gn $FT_USER | tr  \'91 \'92  \'91,\'92 | tr -d \'93\\n\'94\
+id : Kullan\uc0\u305 c\u305  kimliklerini d\'f6nd\'fcr\'fcr\
+-G : Farkl\uc0\u305  grup id\'92lerini g\'f6sterir (Say\u305  olarak yani adres mant\u305 \u287 \u305 ndaki (id) gibi d\'fc\u351 \'fcn)\
+-n : -G veya -g ile birlikte kullan\uc0\u305 l\u305 r . Name\'92ini verir.\
+-g : effective olan\uc0\u305  yani kulland\u305 \u287 \u305 n hali haz\u305 rda aktif olan Grup\
+ \
+$ : de\uc0\u287 i\u351 kenin de\u287 erini \'e7a\u287 \u305 rmak i\'e7in kullan\u305 lan bir i\u351 aretleyicidir.\
+FT_USER : ortam de\uc0\u287 i\u351 keni FT_USER\
+tr : translate(d\'f6n\'fc\uc0\u351 t\'fcrme)\
+-d : delete parametresi\
+\
+Ex02 :\
+find . -type f -name \'93*.sh\'94 -exec basename \{\} .sh \\;\
+. : Mevcut dizini ifade eder , bulma i\uc0\u351 lemi mevcut dizini ve alt dizinleri ifade eder.\
+Exec : \'e7al\uc0\u305 \u351 t\u305 r\
+basename \{string\} suffix : string k\uc0\u305 sm\u305 na file nameleri at\u305 yor  , suffix \'e7\u305 kart\u305 lacak olan eklenti\
+\\; execi sonland\uc0\u305 r\u305 r.\
+Exec basename ile kullan\uc0\u305 ld\u305 \u287 \u305 nda sonu \\; ile biter ve komutlar\u305 n kar\u305 \u351 mamas\u305  i\'e7in birlikte kullan\u305 lmalar\u305  durumunda \\; \'91den \'f6nce new Line atan\u305 r.\
+\
+Ex03 :\
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f1 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 wc -l  
+\f0 ald\uc0\u305 \u287 \u305  girdi  \'fczerindeki sat\u305 r say\u305 s\u305 n\u305  hesaplar ve bu say\u305 y\u305  standart \'e7\u305 kt\u305 ya yazar.\
+Sed : metin d\'fczenlemeleri\cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+S (substitute = de\uc0\u287 i\u351 tirme) komutu bir metin deseni arama ve de\u287 i\u351 tirme i\u351 lemi ger\'e7ekle\u351 tirmek i\'e7in kullan\u305 l\u305 r.\
+/ / bo\uc0\u351 luk karakterini temsil eder\
+g (global) se\'e7ene\uc0\u287 i bir sat\u305 rda birden fazla e\u351 le\u351 me varsa t\'fcm e\u351 le\u351 tirmelerin de\u287 i\u351 tirilmesini sa\u287 lar.\
+Ex04 :\
+ifconfig : a\uc0\u287  ba\u287 lant\u305 lar\u305 n\u305  , IP adreslerini , MAC adreslerini ve di\u287 er a\u287  ayarlar\u305 n\u305  g\'f6sterir\
+grep komutu bir metin ak\uc0\u305 \u351 \u305 nda veya bir dosyada belirli bir deseni aramak i\'e7in kullan\u305 l\u305 r.\
+ -w kelimesi tam e\uc0\u351 le\u351 me yap\u305 lmas\u305 n\u305  sa\u287 lar.\
+ether ifadesi MAC adresini temsil eden bir de\uc0\u287 eri arar.\
+cut komutu metin ak\uc0\u305 \u351 \u305 n\u305  karakterlere g\'f6re b\'f6ler\
+-d ay\uc0\u305 r\u305 c\u305  karakteri (delimeter) belirtir. Bu durumda \'93 \'94 ifadesi bir bo\u351 luk karakteri ile metini par\'e7alara ay\u305 r\u305 r. \
+2 ifadesi ikinci alan\uc0\u305  se\'e7er (Biz etheri aram\u305 \u351 t\u305 k buldu\u287 umda etheri de\u287 il yan\u305 nda yazan MAC a ula\u351 mak i\'e7in cut ile ikiye b\'f6l\'fcp )\
+Ex05 :\
+echo -n \'9342\'94 > \cf3 \'91\'93\\?$*\'92\cf4 \\\'92\cf0 MaRViN\cf4 \\\'92\cf3 \'92*$?\\\'94\'92\cf0 \
+Ex06 :\
+ls -l | awk \'91NR%2==1\'92\
+awk : metin tabanl\uc0\u305  \'e7\u305 kt\u305  \'fcretir\
+Burada NR Number record yani kay\uc0\u305 t say\u305 s\u305 d\u305 r , burada ilk kay\u305 tta dosyan\u305 n adresi sakland\u305 \u287 \u305  i\'e7in ls -l ile g\'f6nderdi\u287 imiz kay\u305 tlar\u305 n ilkini 2. Kay\u305 t olarak ele al\u305 r.\
+\
+\
+}
