@@ -47,3 +47,4 @@ void	rush(int axis_x, int axis_y)
 		cnty++;
 	}
 }
+
