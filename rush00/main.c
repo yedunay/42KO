@@ -1,7 +1,20 @@
-#include <unistd.h>
-void	rush(int axis_x,int axis_y);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: muulutas <42kocaeli.com.tr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/16 13:54:33 by muulutas          #+#    #+#             */
+/*   Updated: 2023/07/16 13:54:35 by muulutas         ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main()
+#include <unistd.h>
+
+void	rush(int axis_x, int axis_y);
+
+int	main(void)
 {
-    rush(5,5);
+	rush(5, 5);
 }
