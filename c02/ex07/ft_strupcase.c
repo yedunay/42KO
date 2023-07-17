@@ -1,6 +1,5 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
+/*                                                                            *//*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
@@ -23,11 +22,3 @@ char *ft_strupcase(char *str)
 	}
 	return str;
 }
-#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	char str[] = "abcdefghj";
-	printf("%s", ft_strupcase(str));
-}
-
