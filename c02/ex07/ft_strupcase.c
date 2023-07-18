@@ -1,5 +1,6 @@
 /* ************************************************************************** */
-/*                                                                            *//*                                                        :::      ::::::::   */
+/*                                                                            */
+	/*                                                        :::      ::::::::   */
 /*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
@@ -8,17 +9,18 @@
 /*   Updated: 2023/07/15 22:30:48 by ydunay           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-char *ft_strupcase(char *str)
+char	*ft_strupcase(char *str)
 {
-	int i ;
+	int	i;
+
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
-		if(str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-		str[i] -= 32;
+			str[i] -= 32;
 		}
 		i++;
 	}
-	return str;
+	return (str);
 }

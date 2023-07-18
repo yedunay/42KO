@@ -1,13 +1,13 @@
-char    *ft_strlowcase(char *str)
+char	*ft_strlowcase(char *str)
 {
-    int c;
+	int	c;
 
-    c = 0;
-    while (str[c] != '\0')
-    {
-        if ((str[c] >= 'A') && (str[c] <= 'Z'))
-            str[c] += 'a' - 'A';
-        c++;
-    }
-    return (str);
+	c = 0;
+	while (str[c] != '\0')
+	{
+		if ((str[c] >= 'A') && (str[c] <= 'Z'))
+			str[c] += 'a' - 'A';
+		c++;
+	}
+	return (str);
 }
