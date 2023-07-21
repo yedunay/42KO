@@ -18,7 +18,7 @@ int	ft_atoi(const char *str)
 			result += str[i] - '0';
 		}
 		if(str[i] == '-')
-			sign = -1;
+			sign *= -1;
 		i++;
 	}
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 
 int	main (void)
 {
-	char str[] = "   -++3YED456";
+	char str[] = "   --++3YED456";
 	ft_atoi(str);
 	printf("%d",ft_atoi(str));
 
