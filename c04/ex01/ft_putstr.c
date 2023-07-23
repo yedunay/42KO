@@ -1,9 +1,22 @@
-#include <unistd.h>
-void ft_putstr(char *str)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/23 10:13:07 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/23 10:13:09 by ydunay           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while(str[i])
-        write(1, str + i++, 1);
+#include <unistd.h>
+
+void	ft_putstr(char *str)
+{
+	int		i;
+
+	i = 0;
+	while (str[i])
+		write(1, str + i++, 1);
 }

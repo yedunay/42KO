@@ -15,16 +15,20 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 		len_src += size;
 	else
 		len_src += len_dest;
-	while (src[i]&& len_dest + 1 < size)
+	while (src[i] && len_dest + 1 < size)
 		dest[len_dest++] = src[i++];
 	dest[len_dest] = '\0';
 	return (len_src);
 }
 #include <stdio.h>
-int main (void)
+
+int	main(void)
 {
-	char src[] = "Born to code";
-    char dest [] = "ydunay 42 yunusemredunay";
-    printf("%i \n", ft_strlcat(dest, src, 24));
-    printf("%s \n", dest);
+	char	src[];
+	char	dest[];
+
+	src[] = "Born to code";
+	dest[] = "ydunay 42 yunusemredunay";
+	printf("%i \n", ft_strlcat(dest, src, 24));
+	printf("%s \n", dest);
 }

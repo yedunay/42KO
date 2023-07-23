@@ -33,6 +33,6 @@ int ft_atoi(char *str)
 }
 int	main (void)
 {
-	char str[] = "-3YED456";
+	char str[] = "--3YED456";
 	printf("%d",ft_atoi(str));
 }

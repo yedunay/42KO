@@ -1,12 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/23 10:13:40 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/23 10:13:41 by ydunay           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-void    ft_putchar(char c)
+
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
-int		check_base(char *base)
+
+int	check_base(char *base)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	while (base[i])
@@ -41,5 +55,5 @@ void	ft_putnbr_base(int nbr, char *base)
 	}
 	if (nbr >= size)
 		ft_putnbr_base(nbr / size, base);
-    ft_putchar(base[nbr % size]);
+	ft_putchar(base[nbr % size]);
 }
