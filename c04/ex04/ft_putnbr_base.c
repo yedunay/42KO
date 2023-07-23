@@ -53,7 +53,7 @@ void	ft_putnbr_base(int nbr, char *base)
 		ft_putchar('-');
 		nbr = -nbr;
 	}
-	if (nbr >= size)
+	if ((unsigned)nbr >= size)
 		ft_putnbr_base(nbr / size, base);
 	ft_putchar(base[nbr % size]);
 }
