@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/15 12:50:50 by ydunay            #+#    #+#             */
-/*   Updated: 2023/07/15 12:50:53 by ydunay           ###   ########.tr       */
+/*   Created: 2023/07/22 11:32:45 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/22 11:33:37 by ydunay           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_uppercase(char *str)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int	i;
+	int		len_str;
+	int		j;
 
-	i = 0;
-	if (str[i] == '\0')
+	len_str = 0;
+	j = 0;
+	if (to_find[j] == '\0')
+		return (str);
+	while (str[len_str])
 	{
-		return (1);
+		while (str[len_str + j] == to_find[j] && str[len_str + j])
+			j++;
+		if (to_find[j] == '\0')
+			return (str + len_str);
+		len_str++;
+		j = 0;
 	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	return (0);
 }

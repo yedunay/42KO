@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/16 01:52:03 by ydunay            #+#    #+#             */
-/*   Updated: 2023/07/16 01:52:05 by ydunay           ###   ########.tr       */
+/*   Created: 2023/07/22 11:32:01 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/22 11:32:12 by ydunay           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_str_is_lowercase(char *str)
+char	*ft_strncat(char *dest, char *src, unsigned int nb)
 {
-	int	i;
+	unsigned int		len_dest;
+	unsigned int		len_src;
 
-	i = 0;
-	if (str[i] == '\0')
+	len_dest = 0;
+	while (dest[len_dest])
+		len_dest++;
+	len_src = 0;
+	while (src[len_src] && len_src < nb)
 	{
-		return (1);
+		dest[len_dest] = src[len_src];
+		len_dest++;
+		len_src++;
 	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'a' && str[i] <= 'z')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	dest[len_dest] = '\0';
+	return (dest);
 }

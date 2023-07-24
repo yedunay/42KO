@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/16 01:51:46 by ydunay            #+#    #+#             */
-/*   Updated: 2023/07/16 01:51:48 by ydunay           ###   ########.tr       */
+/*   Created: 2023/07/22 11:09:40 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/22 11:10:08 by ydunay           ###   ########.tr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-int	ft_str_is_numeric(char *str)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	int	i;
+	unsigned int			i;
 
 	i = 0;
-	if (str[i] == '\0')
+	while (s1[i] && s2[i] && i < n)
 	{
-		return (1);
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
 	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= '0' && str[i] <= '9')
-			i++;
-		else
-			return (0);
-	}
-	return (1);
+	if (i != n)
+		return (s1[i] - s2[i]);
+	return (0);
 }
