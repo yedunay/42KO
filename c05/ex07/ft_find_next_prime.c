@@ -33,7 +33,7 @@ int	ft_find_next_prime(int nb)
 	i = 1;
 	if (nb <= 2)
 		return (2);
-	while (nb + i)
+	while ((nb) < 2147483647)
 	{
 		if (ft_is_prime(nb + i))
 			return (nb + i);
