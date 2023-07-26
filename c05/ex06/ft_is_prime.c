@@ -1,15 +1,27 @@
-int ft_is_prime(int nb)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_is_prime.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/25 10:39:45 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/25 10:39:46 by ydunay           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 2;
-    if(nb <= 1)
-        return 0;
-    while(i < nb)
-    {
-        if(nb % i == 0)
-            return 0;
-        i++;
-    }
-    return 1;
+int	ft_is_prime(int nb)
+{
+	int		i;
+
+	i = 2;
+	if (nb <= 1)
+		return (0);
+	while (i < nb)
+	{
+		if (nb % i == 0)
+			return (0);
+		i++;
+	}
+	return (1);
 }
