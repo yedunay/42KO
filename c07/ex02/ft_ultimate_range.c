@@ -1,9 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/31 16:21:13 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/31 16:21:15 by ydunay           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
-int ft_ultimate_range(int **range, int min, int max)
+
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int		cnt;
-	int		index;
-	int		*buffer;
+	int	cnt;
+	int	index;
+	int	*buffer;
 
 	if (min >= max)
 	{
@@ -11,7 +24,8 @@ int ft_ultimate_range(int **range, int min, int max)
 		return (0);
 	}
 	cnt = max - min;
-	if (!(buffer = malloc(cnt * sizeof(int))))
+	buffer = (int *)malloc(cnt * sizeof(int));
+	if (!buffer)
 	{
 		*range = 0;
 		return (-1);
@@ -24,24 +38,4 @@ int ft_ultimate_range(int **range, int min, int max)
 		index++;
 	}
 	return (cnt);
-}
-#include <stdio.h>
-int		main(void)
-{
-	int	min;
-	int	max;
-	int	*tab;
-    int **tab1 = &tab;
-	int	size;
-	int	i = 0;
-
-	min = 5;
-	max = 10;
-	size = ft_ultimate_range(tab1, min, max);
-	while(i < size)
-	{
-		printf("%d ", tab[i]);
-		i++;
-	}
-
 }

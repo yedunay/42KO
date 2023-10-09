@@ -1,16 +1,11 @@
-#include <unistd.h>
-
-int main(int argc, char **argv)
+#include <stdio.h>
+int main()
 {
-    int i;
-    int j;
-
-    i = 0;
-    while(argc > ++i)
+    char *str= "alperalp";
+    int i = 0;
+    while (i++ < 1000)
     {
-        j = 0;
-        while(argv[i][j])
-            write(1,argv[i] + j++, 1);
-        write(1, "\n", 1);
+        printf("%c\n",*str);
+        str++;
     }
 }

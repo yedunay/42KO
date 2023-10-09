@@ -1,40 +1,41 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ydunay <ydunay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/31 15:14:07 by ydunay            #+#    #+#             */
+/*   Updated: 2023/07/31 15:14:09 by ydunay           ###   ########.tr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
-int     ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-    int     i;
+	int	i;
 
-    i = 0;
-    while(str[i])
-        i++;
-    return i;
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }
 
-char    *ft_strdup(char *src)//string duplicate
+char	*ft_strdup(char *src)
 {
-    int i;
-    char *new;
-//Alttaki ifadede bellekte yer ayırılmaya çalışılır bu işlem sırasında yeterli alan bulunamazsa ve istenilen miktarda yer ayırmak mümkün değilse malloc NULL döndürecektir.
-    if(!(new = (char *)malloc((ft_strlen(src) + 1) * sizeof(char))))
-        return NULL; //Genellikle pointerlarda kullanılır ve bir bellek adresini ifade etmediğini gösterir / işaretçinin değerinin NULL olduğunu gösterir.
-    i = 0;
-    while(src[i])
-    {
-        new[i] = src[i];
-        i++;
-    }
-    new[i] = '\0';
-    return new;
-}
-#include <stdio.h>
-int	main(void)
-{
-	char *test;
-	char *dup;
+	int		i;
+	char	*new;
 
-	test = "Testando a função strdup!";
-	printf("test = %s\n", test);
-	dup = ft_strdup(test);
-	printf("dup  = %s\n", dup);
-	free(dup);
+	new = (char *)malloc((ft_strlen(src) + 1) * sizeof(char));
+	if (!new)
+		return (NULL);
+	i = 0;
+	while (src[i])
+	{
+		new[i] = src[i];
+		i++;
+	}
+	new[i] = '\0';
+	return (new);
 }
